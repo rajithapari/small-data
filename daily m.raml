@@ -1,0 +1,112 @@
+#%RAML 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/6c62c8a7-f387-4bc7-909b-c361ddda1f66/api/v1/account/accountId # baseUri: /api/v1/account/accountId
+version: v1
+# User Strory Description
+title: Create API to get Statements
+
+# Endpoint URI protocol used HTTPS
+protocols: [HTTPS]
+
+# mediaType application/json
+mediaType: application/json
+
+# securitySchemes used oAuth2
+securitySchemes:
+ oAuthSecurity: !include statementsEndPoint_security.raml      
+
+# externilised entity in statements_entity.raml
+uses: 
+ library: statementsEndPoint_entity.raml     
+
+# using outhSecurity type mentioned above
+securedBy: [oAuthSecurity]
+
+# Endpoint URI to get statements for Account Type after base URI
+/statementId:
+  get:  
+    queryParameters:
+      accountId:
+       type: string
+       example:
+        "1337902468"
+      accountType:
+       type: string
+       example:
+        "Loan Account"   
+      startTime:
+       type: date-only
+       example:
+        2018-01-01
+      endTime:
+       type: date-only
+       example:
+        2018-02-01
+    
+    #body: 
+    #     example: !include Success_Input.raml                     
+    responses:
+      # Sucessful request for code 200
+      200:
+        body:
+          application/json:
+            # Included file for to show for LoanAccountResponse
+            type: library.loanAccount | library.depositAccount |               library.investmentAccount | library.locAccount | library.statement
+            #example: !include LoanAccountRequest.raml
+      # Error Scenerion for code 400
+      400: 
+        body:
+          application/json:
+           type: library.error
+           # Error message for code 400 - Invalid Request
+           example:
+              {
+                 code: 400,
+                 message: "Invalid Request please check url"
+              }
+      # Error Scenerion for code 401
+      401:
+        body:
+          application/json:
+            type: library.error
+            # Error message for code 401 - UnAauthorised Request
+            example: 
+              {
+                code: 401,
+                message: "UnAauthorised Request please check url"
+              }      
+      # Error Scenerion for code 404
+      404:
+        body:
+          application/json:
+            type: library.error
+            # Error message for code 404 - Resoure NOT FOUND
+            example:
+              {
+                code: 404,
+                message: "Resoure NOT FOUND please check url"
+              }
+      # Error Scenerion for code 405
+      405:
+        body:
+          application/json:
+            type: library.error
+            # Error message for code 405 - Method Not Allowed
+            example: 
+              {
+                code: 405,
+                message: "Method Not Allowed"
+              }      
+      # Error Scenerion for code 501
+      501:
+        body:
+          application/json:
+            type: library.error
+            # Error message for code 501 - Internal Server Error
+            example: 
+              {
+                code: 501,
+                message: "Internal Server Error, Please check Server status"
+              }  
+        
+            
+              

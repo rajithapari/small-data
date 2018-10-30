@@ -1,0 +1,89 @@
+http://34.236.109.151:8000/ws/bankdetails.wsdl 
+
+wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://bank-web-service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"xmlns:tns="http://bank-web-service" targetNamespace="http://bank-web-service..
+
+is this the response
+check the database as well : host  34.236.109.151
+username stargate and pwd stargate
+
+
+host = mudb.mulesoft-training.com
+port = 3306
+user = mule
+password = mule
+db.database = training 
+
+
+28.9.2018
+
+
+http://34.236.109.151:8000/ws/bankdetails.wsdl : For bank details
+ 
+http://34.236.109.151:8000/ws/customer.wsdl : For customer details
+ 
+http://34.236.109.151:8000/ws/customeraddress.wsdl : For customer address details
+ 
+Please share with the team. 
+
+
+info@excelityglobal.com
+
+
+[?10/?3/?2018 2:38 PM]  Brahmankar, Kunal:  
+http://www.springboottutorial.com/spring-boot-crud-rest-service-with-jpa-hibernate 
+http://www.springboottutorial.com/spring-boot-exception-handling-for-rest-services 
+ 
+[?10/?10/?2018 3:35 PM]  Venugopal, Selvi:  
+https://developer.salesforce.com/en/signup 
+https://login.salesforce.com/ 
+ 
+
+[?10/?10/?2018 11:54 AM]  Venugopal, Selvi:  
+https://docs.mulesoft.com/mule-runtime/3.9/dataweave-examples 
+ 
+[?10/?10/?2018 11:58 AM]  Venugopal, Selvi:  
+https://docs.mulesoft.com/mule-runtime/3.9/dataweave 
+u can refer these docs for dataweave other topics 
+ 
+[?10/?10/?2018 12:23 PM]  Venugopal, Selvi:  
+https://docs.mulesoft.com/mule-runtime/3.9/dataweave-types#type-coercion-table 
+
+
+task of sprint task.......
+
+
+https://dzone.com/articles/consuming-soap-web-service-using-mule  
+http://34.236.109.151:8000/ws/bankdetails.wsdl 
+ 
+
+
+...............
+https://training.mulesoft.com 
+
+
+
+  soap   link.....
+
+http://34.236.109.151:8000/ws/bankdetails.wsdl 
+
+
+
+
+.....test ....
+
+https://icompassweb.fs.capgemini.com/iCompass/#/assessment
+
+
+
+
+https://icompassweb.fs.capgemini.com/iCompass/#/assessment
+
+
+ ....... for exceptions ..........
+
+https://www.baeldung.com/java-new-custom-exception
+
+
+ workspace of STS...
+
+C:\Users\rkinikar\Documents\workspace-sts-3.8.4.RELEASE\StatusOfTransferBtnAccounts

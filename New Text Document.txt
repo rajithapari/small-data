@@ -1,0 +1,20 @@
+select * from transaction t,accountdescriptor a where t.AccountId=a.AccountId and a.CustomerId="111111101"; 
+
+
+List<Transaction> fetchList(String accountId); 
+@SuppressWarnings("unchecked")
+	@Override
+	public List<Transaction> fetchList(String accountId,String status) 
+	{
+		// TODO Auto-generated method stub
+		
+		System.out.println(accountId+"  "+status);
+		Query query = entityManager.createNativeQuery("select * from transaction t,accountdescriptor a where t.AccountId=a.AccountId  and t.AccountId='accountId' and t.Status='status';", Transaction.class);
+		/*query.setParameter(accountId, "accountId");
+		query.setParameter(status, "status");*/
+		System.out.println(" Result ::: " + query.getResultList());	
+		
+		
+		return query.getResultList();
+		
+	} 
