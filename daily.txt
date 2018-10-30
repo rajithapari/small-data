@@ -87,3 +87,15 @@ https://www.baeldung.com/java-new-custom-exception
  workspace of STS...
 
 C:\Users\rkinikar\Documents\workspace-sts-3.8.4.RELEASE\StatusOfTransferBtnAccounts
+
+
+
+
+git data how to add in our geeth hub......
+
+
+git init
+git add --all
+git commit -m
+git remote add origin t (url of new repository)
+git push origin master 
